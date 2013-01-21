@@ -100,5 +100,5 @@ src/RakNetTransport2.cpp \
 src/RakString.cpp \
 src/Router2.cpp 
 
-include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_STATIC_LIBRARY)
 

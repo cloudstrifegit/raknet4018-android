@@ -1072,7 +1072,7 @@ RakNet::RakString SocketLayer::GetSubNetForSocketAndIp(SOCKET inSock, RakNet::Ra
 
 #elif defined(_PS3) || defined(__PS3__) || defined(SN_TARGET_PS3)
                                                                                                                                                                                                                                                                                              
-#elif defined(ANDROID)
+/*#elif defined(ANDROID)
 void GetMyIP_Linux( SystemAddress addresses[MAXIMUM_NUMBER_OF_INTERNAL_IDS] )
 {
 	struct ifreq ifreqs[MAXIMUM_NUMBER_OF_INTERNAL_IDS];
@@ -1124,7 +1124,7 @@ void GetMyIP_Linux( SystemAddress addresses[MAXIMUM_NUMBER_OF_INTERNAL_IDS] )
 	}
 }
 */
-#elif !defined(_XBOX) && !defined(X360)
+#elif (!defined(_XBOX) && !defined(X360)) || defined(ANDROID)
 void GetMyIP_Win32( SystemAddress addresses[MAXIMUM_NUMBER_OF_INTERNAL_IDS] )
 {
 	char ac[ 80 ];
